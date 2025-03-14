@@ -39,6 +39,7 @@ jobs:
               ${{ steps.changed-files.outputs.all_changed_and_modified_files }} \
           )
           echo "charts=${charts}" >> $GITHUB_OUTPUT
+        continue-on-error: true
 
   push-charts:
     needs: changed-files
